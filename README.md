@@ -9,7 +9,7 @@ AirSpy is an end-to-end air quality forecasting system that predicts AQI trends 
 ## How the system works
 
 1. **User selects a city or location** on the dashboard
-2. **A deep learning ensemble** (LSTM, BiLSTM, GRU) forecasts AQI for the next 72 hours, trained on 26,000+ records from the CPCB dataset
+2. **A deep learning ensemble** (LSTM, BiLSTM, GRU) forecasts AQI for the next 72 hours, trained on 26,000+ records from the CPCB dataset containing data from 4 Indian cities for better generalization and over t he time period of an entire year 2024 to encounter seasonal changes as well as the affect of geographgical location on them.
 3. **An RDF knowledge graph** is built around the prediction, linking the forecasted AQI to the specific pollutants and conditions contributing to it
 4. **The dashboard renders** the forecast, a pollutant breakdown, and an explainability view — so the prediction isn't just a number, it comes with reasoning
 
@@ -32,7 +32,7 @@ This is the **frontend dashboard** — a React + TypeScript app that:
 
 ## Architecture
 
-![AirSpy Architecture](./architecture.png)
+![AirSpy Architecture](./new_flochart.jpeg)
 
 ## Running locally
 
