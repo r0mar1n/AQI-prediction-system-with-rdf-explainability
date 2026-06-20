@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    --primary: 195 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 195 85% 65%;
+
+    --secondary: 174 60% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 30% 92%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 165 75% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 25% 88%;
+    --input: 214 25% 88%;
+    --ring: 195 85% 45%;
+
+    --radius: 0.75rem;
+
+    /* AQI Level Colors */
+    --aqi-good: 142 76% 45%;
+    --aqi-good-foreground: 0 0% 100%;
+    
+    --aqi-moderate: 45 93% 55%;
+    --aqi-moderate-foreground: 215 25% 15%;
+    
+    --aqi-unhealthy-sensitive: 35 95% 60%;
+    --aqi-unhealthy-sensitive-foreground: 0 0% 100%;
+    
+    --aqi-unhealthy: 0 85% 60%;
+    --aqi-unhealthy-foreground: 0 0% 100%;
+    
+    --aqi-very-unhealthy: 280 65% 50%;
+    --aqi-very-unhealthy-foreground: 0 0% 100%;
+    
+    --aqi-hazardous: 350 80% 35%;
+    --aqi-hazardous-foreground: 0 0% 100%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(195 85% 45%), hsl(174 60% 50%));
+    --gradient-aqi-good: linear-gradient(135deg, hsl(142 76% 45%), hsl(142 76% 65%));
+    --gradient-aqi-moderate: linear-gradient(135deg, hsl(45 93% 55%), hsl(45 93% 75%));
+    --gradient-aqi-unhealthy: linear-gradient(135deg, hsl(0 85% 60%), hsl(0 85% 75%));
+    
+    /* Shadows */
+    --shadow-card: 0 2px 8px -2px hsl(215 25% 15% / 0.08);
+    --shadow-card-hover: 0 8px 24px -4px hsl(215 25% 15% / 0.12);
+    --shadow-alert: 0 4px 16px -2px hsl(0 85% 60% / 0.2);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 25% 25%;
+    --sidebar-primary: 195 85% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 215 25% 25%;
+    --sidebar-border: 214 25% 88%;
+    --sidebar-ring: 195 85% 45%;
+  }
+
+  .dark {
+    --background: 215 30% 10%;
+    --foreground: 210 30% 95%;
+
+    --card: 215 28% 14%;
+    --card-foreground: 210 30% 95%;
+
+    --popover: 215 28% 14%;
+    --popover-foreground: 210 30% 95%;
+
+    --primary: 195 85% 55%;
+    --primary-foreground: 215 30% 10%;
+    --primary-glow: 195 85% 70%;
+
+    --secondary: 174 55% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 25% 20%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 165 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 80% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 25% 22%;
+    --input: 215 25% 22%;
+    --ring: 195 85% 55%;
+
+    /* AQI Colors - Dark Mode */
+    --aqi-good: 142 70% 40%;
+    --aqi-good-foreground: 0 0% 100%;
+    
+    --aqi-moderate: 45 90% 50%;
+    --aqi-moderate-foreground: 215 25% 15%;
+    
+    --aqi-unhealthy-sensitive: 35 90% 55%;
+    --aqi-unhealthy-sensitive-foreground: 0 0% 100%;
+    
+    --aqi-unhealthy: 0 80% 55%;
+    --aqi-unhealthy-foreground: 0 0% 100%;
+    
+    --aqi-very-unhealthy: 280 60% 45%;
+    --aqi-very-unhealthy-foreground: 0 0% 100%;
+    
+    --aqi-hazardous: 350 75% 30%;
+    --aqi-hazardous-foreground: 0 0% 100%;
+
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(195 85% 55%), hsl(174 55% 45%));
+    --gradient-aqi-good: linear-gradient(135deg, hsl(142 70% 40%), hsl(142 70% 55%));
+    --gradient-aqi-moderate: linear-gradient(135deg, hsl(45 90% 50%), hsl(45 90% 65%));
+    --gradient-aqi-unhealthy: linear-gradient(135deg, hsl(0 80% 55%), hsl(0 80% 70%));
+
+    --shadow-card: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-card-hover: 0 8px 24px -4px hsl(0 0% 0% / 0.4);
+    --shadow-alert: 0 4px 16px -2px hsl(0 80% 55% / 0.3);
+
+    --sidebar-background: 215 28% 12%;
+    --sidebar-foreground: 210 30% 90%;
+    --sidebar-primary: 195 85% 55%;
+    --sidebar-primary-foreground: 215 30% 10%;
+    --sidebar-accent: 215 25% 18%;
+    --sidebar-accent-foreground: 210 30% 90%;
+    --sidebar-border: 215 25% 20%;
+    --sidebar-ring: 195 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* 🔥 FIX LEAFLET (no overlay hijack, no weird layering) */
+.leaflet-container {
+  position: relative !important;
+  z-index: 0 !important;
+  height: 100% !important;   /* 🔥 prevents overflow bugs */
+  width: 100% !important;
+}
+
+/* 🔥 SMOOTH FADE ANIMATION (for LoadingFacts) */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease;
+}
